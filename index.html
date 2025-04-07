@@ -4,17 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Typing Speed Test</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="container">
-    <h1>Typing Speed Test</h1>
-    <p id="quote">Click start to begin</p>
-    <textarea id="input" placeholder="Start typing here..." disabled></textarea>
-    <div class="controls">
-      <button id="startBtn">Start</button>
-      <p id="result"></p>
+<body class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 dark:from-gray-800 dark:via-gray-900 dark:to-black min-h-screen flex items-center justify-center font-inter">
+  <div class="container bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-xl w-full">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Typing Speed Test</h1>
+      <button id="themeToggle" class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 rounded">
+        Toggle Theme
+      </button>
     </div>
+    <p id="quote" class="text-center text-lg text-gray-700 dark:text-gray-300 mb-4">Click start to begin</p>
+    <textarea id="input" class="w-full p-4 border rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 mb-4" placeholder="Start typing here..." disabled></textarea>
+    <div class="flex justify-between items-center mb-4">
+      <button id="startBtn" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded">Start</button>
+      <p id="result" class="text-lg font-semibold text-green-600 dark:text-green-400"></p>
+    </div>
+    <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-100 mb-2">🏆 Leaderboard (Top 5)</h2>
+    <div id="leaderboard" class="bg-gray-100 dark:bg-gray-700 p-4 rounded"></div>
   </div>
   <script src="script.js"></script>
 </body>
