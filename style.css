@@ -1,16 +1,35 @@
-/* Apply the Inter font throughout the project */
+/* Apply Lexend font throughout the project */
 .font-lexend {
-    font-family: 'Lexend', sans-serif;
-  }
-  
-  /* Custom animation for result text (optional) */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  #result {
-    animation: fadeIn 0.5s ease-in;
+  font-family: 'Lexend', sans-serif;
+}
+
+.letter {
+  transition: background-color 0.2s ease;
+}
+
+.correct {
+  color: #10B981; /* Tailwind green-500 */
+}
+
+.incorrect {
+  color: #F87171; /* Tailwind red-400 */
+}
+
+.current {
+  border-bottom: 2px solid #3B82F6; /* Tailwind blue-500 */
+}
+
+#result {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#quote {
+    font-family: "Courier New", Courier, monospace;
   }
   
   
