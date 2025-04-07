@@ -19,6 +19,17 @@
   border-bottom: 2px solid #3B82F6; /* Tailwind blue-500 */
 }
 
+.offscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    border: none;
+  }
+  
+
 #result {
   animation: fadeIn 0.5s ease-in;
 }
@@ -29,7 +40,9 @@
 }
 
 #quote {
+    white-space: pre-wrap;
     font-family: "Courier New", Courier, monospace;
+    font-size: large;
   }
   
   
